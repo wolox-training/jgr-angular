@@ -1,44 +1,37 @@
 .tech {
-    background: url('./assets/react_icon.svg') no-repeat;
-    background-color: $green;
-    background-position-x: center;
-    background-size: $tech-logo-size;
-    padding-bottom :30px;
-    padding-top :150px;
-    position: relative;
-    margin: 30px;
-    background-position-y: 30px;
+  background-color: $green;
+  border-radius: 10px;
+  color: aqua;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  position: relative;
+  text-align: center; 
+  width: 230px;
+
+  &:before{
+    border: 2px solid $green;
     border-radius: 10px;
-    width: 220px;
- 
-    .text {
-      color: $equalizer-black;
-      display: flex;
-      font-size: $text-medium;
-      justify-content: center;  
-    }
-
-    #titleTech {
-      font-size: $text-medium;
-      padding-bottom: 10px;
-    }
-
-    #bold {
-      font-weight: bold;
-      font-size: $text-medium;
-      padding-bottom: 35px;
-    }
-
-    &:before{
-      content: "";
-      border-color: $green;
-      border-radius: 10px;
-      border-style: solid;
-      bottom: 10px;
-      left: -10px;
-      position: absolute;
-      top: -10px;
-      width: 220px;
-      z-index: -1;  
-    }
+    content: "";
+    height: 100%;
+    left: -10px;
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    z-index: -1;  
+  }    
 }
+
+.img {
+  height: $tech-logo-size;
+  width: auto;
+}
+
+.text {
+  font-size: $text-medium;
+  padding-top: 10px;
+  padding-bottom: 10px;        
+}
+ 
