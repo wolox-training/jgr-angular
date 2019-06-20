@@ -21,6 +21,19 @@
   text-align: center; 
   width: 250px;
 
+  &::after {
+    opacity: 0;
+    border: 2px solid $green;
+    border-radius: 10px;
+    content: "";
+    height: 100%;
+    right: -10px;
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    z-index: -1; 
+  } 
+
   &::before {
     border: 2px solid $green;
     border-radius: 10px;
@@ -31,6 +44,14 @@
     top: -10px;
     width: 100%;
     z-index: -1; 
+  }
+
+  &:hover::after {
+    opacity: 10;
+  }
+
+  &:hover::before {
+    opacity: 0;
   }
 }
 
