@@ -16,10 +16,10 @@
 }
 
 .text-nav {
+  align-self: center;
   display: flex;
   font-size: $text-big;
   margin: 30px;
-  align-self: center;
   width: 100%;
   justify-content: flex-end;
 }
