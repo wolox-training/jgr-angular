@@ -34,8 +34,8 @@
   }
 
   &:hover::before {
-    top: 10px;
-    transform: translateX(20px);
+    transition-property: all;
+    transform: translate(20px, 20px);
   }
 }
 
