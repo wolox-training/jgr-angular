@@ -8,7 +8,6 @@
   justify-content: center;
   max-height: 50%;
   max-width: 50%;
-  width: auto;
 }
 
 .tech {
@@ -22,25 +21,25 @@
   position: relative;
   text-align: center; 
   width: 250px;
-
-  &::before {
-    border: 2px solid $green;
-    border-radius: 10px;
-    content: "";
-    height: 100%;
-    left: -10px;
-    position: absolute;
-    top: -10px;
-    width: 100%;
-    z-index: -1;  
-  }    
 }
 
+.tech::before {
+  border: 2px solid $green;
+  border-radius: 10px;
+  content: "";
+  height: 100%;
+  left: -10px;
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  z-index: -1; 
+}
+  
 .technologies {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 20px 100px 0 100px;
+  margin: 20px 200px 20px 120px;
 }
 
 .text {
