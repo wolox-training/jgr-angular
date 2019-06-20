@@ -29,12 +29,12 @@
     left: -10px;
     position: absolute;
     top: -10px;
+    transition-property: 330ms;
     width: 100%;
     z-index: -1; 
   }
 
   &:hover::before {
-    transition-property: all;
     transform: translate(20px, 20px);
   }
 }
