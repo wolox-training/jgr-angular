@@ -1,24 +1,21 @@
 .navbar {
+  align-items: center;
   background-color: $white;
-  box-shadow: 7px 7px 5px $grey;
+  box-shadow: 2px 3px 3px rgba($grey, 0.3);
   display: flex;
   height: $nav-height;
+  justify-content: space-between;
   position: fixed;
   width: 100%;
   z-index: 1;
 }
 
 .wolox-logo {
-  align-self: center;
   height: $nav-logo-height;
-  margin-left: 30px;;
+  padding-left: 30px;;
 }
 
 .text-nav {
-  align-self: center;
-  display: flex;
   font-size: $text-big;
-  justify-content: flex-end;
-  margin: 30px;
-  width: 100%;
+  padding-right: 30px;
 }
