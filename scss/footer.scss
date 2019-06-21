@@ -1,0 +1,29 @@
+.footer {
+  align-items: center;
+  background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  padding: 50px 20px;
+  width: 100%;
+}
+
+.footer-copy {
+  color: $white;
+  font-size: $text-small;
+  font-weight: 200;
+  margin: 20px;
+  text-align: end;
+  width: 100%;  
+}
+
+.footer-img {
+  height: 60px;
+  margin-top: 10px;
+}
+
+.footer-text {
+  color: $white;
+  font-size: $text-big;
+  font-weight: 200;
+}

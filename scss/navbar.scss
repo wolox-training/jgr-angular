@@ -1,0 +1,20 @@
+.navbar {
+  align-items: center;
+  background-color: $white;
+  box-shadow: 2px 3px 3px rgba($grey, 0.3);
+  display: flex;
+  height: $nav-height;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.wolox-logo {
+  height: $nav-logo-height;
+}
+
+.text-nav {
+  font-size: $text-big;
+}

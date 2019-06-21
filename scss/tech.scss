@@ -1,0 +1,51 @@
+.bold {
+  font-weight: bold;
+}
+
+.card-image {
+  align-self: center;
+  height: $tech-logo-size;
+  justify-content: center;
+  width: $tech-logo-size;
+}
+
+.tech {
+  background-color: $green;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; 
+  margin: 15px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  position: relative;
+  text-align: center; 
+  width: 250px;
+
+  &::before {
+    border: 2px solid $green;
+    border-radius: 10px;
+    content: "";
+    height: 100%;
+    left: -10px;
+    position: absolute;
+    top: -10px;
+    transition: 330ms;
+    width: 100%;
+    z-index: -1; 
+  }
+
+  &:hover::before {
+    transform: translate(20px, 20px);
+  }
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 200px;
+}
+
+.text {
+  font-size: $text-medium;
+  margin: 10px 30px;
+}
