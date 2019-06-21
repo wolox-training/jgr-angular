@@ -5,6 +5,7 @@
   display: flex;
   height: $nav-height;
   justify-content: space-between;
+  padding: 0 30px;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -12,10 +13,8 @@
 
 .wolox-logo {
   height: $nav-logo-height;
-  padding-left: 30px;;
 }
 
 .text-nav {
   font-size: $text-big;
-  padding-right: 30px;
 }
