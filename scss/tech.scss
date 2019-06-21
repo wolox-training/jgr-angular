@@ -9,6 +9,19 @@
   width: $tech-logo-size;
 }
 
+.cont-tecnologies {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.react {
+  grid-column: 1;
+  grid-row: 2;
+
+}
+
+
 .tech {
   background-color: $green;
   border-radius: 10px;
