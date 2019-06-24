@@ -44,3 +44,20 @@
   font-size: $text-medium;
   margin: 10px 30px;
 }
+
+@media only screen and (max-width: 1024px) {
+  .cont-technologies  {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .tech {
+    border-bottom: 2px solid $green;
+
+    &:first-child::before {
+      display: none;
+    }
+  }
+}
