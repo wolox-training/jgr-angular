@@ -9,40 +9,34 @@
   width: $tech-logo-size;
 }
 
+.cont-technologies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  padding: 0 250px; 
+}
+
 .tech {
-  background-color: $green;
-  border-radius: 10px;
   display: flex;
   flex-direction: column; 
-  margin: 15px;
-  padding-bottom: 30px;
-  padding-top: 10px;
+  height: 100%;
+  margin: 30px;
   position: relative;
   text-align: center; 
   width: 250px;
+  
+  &:first-child {
+    grid-row: 1/3;
+    justify-self: end;
+    justify-content: center;
 
-  &::before {
-    border: 2px solid $green;
-    border-radius: 10px;
-    content: "";
-    height: 100%;
-    left: -10px;
-    position: absolute;
-    top: -10px;
-    transition: 330ms;
-    width: 100%;
-    z-index: -1; 
-  }
-
-  &:hover::before {
-    transform: translate(20px, 20px);
-  }
-}
-
-.technologies {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px 200px;
+    &::before {
+      border-right: 2px solid $green;
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+  } 
 }
 
 .text {
