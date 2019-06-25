@@ -46,14 +46,19 @@
 
 @media only screen and (max-width: 1024px) {
   .cont-technologies  {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    justify-items: center;
     padding: 0;
   }
 
   .tech {
     border-bottom: 2px solid $green;
+    margin: 0;
+    padding-top: 50px;
+    
+    &:first-child{
+      justify-self: center;
+    }
 
     &:first-child::before {
       display: none;
