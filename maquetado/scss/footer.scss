@@ -28,3 +28,21 @@
   font-size: $text-big;
   font-weight: 200;
 }
+
+@media only screen and (max-width: 1024px) {
+  .footer {
+    padding: 40px 10px;
+  }
+
+  .footer-copy {
+    text-align: center;
+  }
+
+  .footer-img {
+    padding: 10px;
+  }
+
+  .footer-text {
+    font-size: $text-medium;
+  }
+}
