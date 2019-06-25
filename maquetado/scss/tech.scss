@@ -1,0 +1,67 @@
+.bold {
+  font-weight: bold;
+}
+
+.card-image {
+  align-self: center;
+  height: $tech-logo-size;
+  justify-content: center;
+  width: $tech-logo-size;
+}
+
+.cont-technologies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 250px; 
+}
+
+.tech {
+  display: flex;
+  flex-direction: column; 
+  height: 100%;
+  margin: 30px;
+  position: relative;
+  text-align: center; 
+  width: 250px;
+  
+  &:first-child {
+    grid-row: 1/3;
+    justify-self: end;
+    justify-content: center;
+
+    &::before {
+      border-right: 2px solid $green;
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+  } 
+}
+
+.text {
+  font-size: $text-medium;
+  margin: 10px 30px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .cont-technologies  {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0;
+  }
+
+  .tech {
+    border-bottom: 2px solid $green;
+    margin: 0;
+    padding-top: 50px;
+    
+    &:first-child{
+      justify-self: center;
+    }
+
+    &:first-child::before {
+      display: none;
+    }
+  }
+}
