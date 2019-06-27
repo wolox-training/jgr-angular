@@ -4,21 +4,21 @@
       <img class="login-img" src="../../assets/wolox_logo.svg" alt="wolox-logoi">
       <h1 class="login-text-title"> Books</h1>
     </div>
-    <form class="login-form">
+    <form name="formulario" [formGroup]="form" class="login-form">
       <p class="input-title">First name</p>
-      <input class="login-input" type="text">
+      <input class="login-input" formControlName="first_name" type="text" [(ngModel)]="nameText">
       <p class="input-title">Last name</p>
-      <input class="login-input" type="text">
+      <input class="login-input" formControlName="last_name" type="text">
       <p class="input-title">Email</p>
-      <input class="login-input" type="text">
+      <input class="login-input" formControlName="email" type="text">
       <p class="input-title">Password</p>
-      <input class="login-input" type="text">
+      <input class="login-input" formControlName="password" type="password" [(ngModel)]="password">
     </form>
     <div class="sing-up-div">
       <input value="Sing up" class="login-input sing-up-button" type="submit">
     </div>
     <div class="login-button-div">
-      <input value="Login" class="login-input login-button" type="submit">
+      <input value="Login" class="login-input login-button" type="submit" (click)="login()">
     </div>
   </div>
 </div>
