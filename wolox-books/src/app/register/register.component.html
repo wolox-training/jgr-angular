@@ -1,24 +1,24 @@
-<div class="window">
-    <div class="login">
-      <div class="login-title">
-        <img class="login-img" src="../../assets/wolox_logo.svg" alt="wolox-logoi">
-        <h1 class="login-text-title"> Books</h1>
+<div class="main-page">
+    <div class="register">
+      <div class="register-title">
+        <img class="register-img" src="assets/wolox_logo.svg" alt="wolox-logoin">
+        <h1 class="register-text-title">Books</h1>
       </div>
-      <form [formGroup]="form" (ngSubmit)="singUp(form.value)" class="login-form">
+      <form [formGroup]="form" (ngSubmit)="singUp(form.value)" class="register-form">
         <p class="input-title">First name</p>
-        <input class="login-input" formControlName="first_name" type="text">
+        <input class="register-input" formControlName="firstName" type="text">
         <p class="input-title">Last name</p>
-        <input class="login-input" formControlName="last_name" type="text">
+        <input class="register-input" formControlName="lastName" type="text">
         <p class="input-title">Email</p>
-        <input class="login-input" formControlName="email" type="text">
+        <input class="register-input" formControlName="email" type="text">
         <p class="input-title">Password</p>
-        <input class="login-input" formControlName="password" type="password">
+        <input class="register-input" formControlName="password" type="password">
         <div class="sing-up-div">
-          <input value="Sing up" class="login-input sing-up-button" type="submit">
+          <button class="register-input sing-up-button" type="submit">Sing up</button>
         </div>
       </form>
-      <div class="login-button-div">
-        <input value="Login" class="login-input login-button" type="button">
+      <div class="register-button-div">
+        <button class="register-input register-button" type="button">Login</button>
       </div>
     </div>
   </div>
