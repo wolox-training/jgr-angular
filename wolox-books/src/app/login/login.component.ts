@@ -29,6 +29,6 @@ export class LoginComponent implements OnInit {
     var first_name = post.first_name;
     var last_name = post.last_name;
     var locale = "en";
-    console.log(JSON.stringify({user:{email , password , password_confirmation, first_name, last_name, locale}}));
+    console.log(JSON.stringify({user:{email , password , password_confirmation, first_name, last_name, locale}})); 
   }
 }
