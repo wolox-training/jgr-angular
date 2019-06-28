@@ -21,13 +21,14 @@ export class RegisterComponent implements OnInit {
   }
 
   singUp(post: any) {
-    let email = post.email;
-    let password = post.password;
-    let password_confirmation = post.password;
-    let first_name = post.firstName;
-    let last_name = post.lastName;
-    let locale = "en";
-    console.log(JSON.stringify({user:{ email , password , password_confirmation, first_name, last_name, locale}})); 
+    let user = { 
+      email: post.email, 
+      password: post.password, 
+      password_confirmation: post.password, 
+      first_name: post.firstName, 
+      last_name: post.lastName,
+      locale:"en"
+    }
+    console.log(JSON.stringify({user})); 
   }
-
 }
