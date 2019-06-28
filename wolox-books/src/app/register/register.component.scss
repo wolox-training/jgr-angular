@@ -1,0 +1,79 @@
+@import '../../variables';
+
+.input-title {
+    padding: 5px 10px; 
+}
+
+.login {
+    align-items: center;
+    background-color: $login-grey;
+    border-top: 4px solid $blue;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 330px;
+}
+
+.login-button {
+    background-color: $login-grey;
+    border-radius: 10px;
+    border: 2px solid $green;
+    color: $green; 
+    width: 100%;
+}
+
+.login-button-div {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.login-img {
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.login-input {
+    border-radius: 10px;
+    height: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-text-title {
+    font-family: $login-font;
+    font-size: $text-big;
+}
+
+.login-title {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.sing-up-button {
+    background-color: $green;
+    border-radius: 10px;
+    color: $white; 
+    width: 100%;
+}
+
+.sing-up-div {
+    border-bottom: 2px solid $grey; 
+    height: 65px;
+    margin-bottom: 10px;width: 100%;
+}
+
+.window {
+    display: flex;
+    justify-content: center;
+    padding-top: 150px; 
+}
