@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UserService } from '../../services/user.service' ;
+
 
 @Component({
   selector: 'app-register',
@@ -9,7 +11,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class RegisterComponent implements OnInit {
   form: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private service: UserService) {}
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -29,6 +31,7 @@ export class RegisterComponent implements OnInit {
       last_name: post.lastName,
       locale:"en"
     }
-    console.log(JSON.stringify({user})); 
+    
+    this.service.createUser(user).subscribe(data => {console.log(data)});
   }
 }
