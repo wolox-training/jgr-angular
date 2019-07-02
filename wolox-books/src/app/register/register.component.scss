@@ -1,0 +1,80 @@
+@import '../../variables';
+
+.main-page {
+    display: flex;
+    justify-content: center;
+    padding-top: 150px; 
+}
+
+.register {
+    align-items: center;
+    background-color: $register-grey;
+    border-top: 4px solid $blue;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 330px;
+
+    .register-button-div {
+        margin-top: 10px;
+        width: 100%;
+
+        .register-button {
+            background-color: $register-grey;
+            border-radius: 10px;
+            border: 2px solid $green;
+            color: $green; 
+            width: 100%;
+        }
+    }
+
+    .register-form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        width: 100%;
+
+        .input-title {
+            padding: 5px 10px; 
+        }
+    }
+
+    .register-input {
+        border-radius: 10px;
+        height: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .register-title {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        width: 100%;
+
+        .register-img {
+            margin-bottom: 10px;
+            padding: 0 20px;
+        }
+
+        .register-text-title {
+            font-family: $register-font;
+            font-size: $text-big;
+        }
+    }
+
+    .sing-up-div {
+        border-bottom: 2px solid $grey; 
+        height: 65px;
+        margin-bottom: 10px;
+        width: 100%;
+
+        .sing-up-button {
+            background-color: $green;
+            border-radius: 10px;
+            color: $white; 
+            width: 100%;
+        }
+    }
+}
