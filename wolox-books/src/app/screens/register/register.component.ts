@@ -10,6 +10,7 @@ import { UserService } from '../../services/user.service' ;
 })
 export class RegisterComponent implements OnInit {
   form: FormGroup;
+  local: string = "en";
 
   constructor(private fb: FormBuilder, private service: UserService) {}
 
@@ -29,9 +30,13 @@ export class RegisterComponent implements OnInit {
       password_confirmation: post.password, 
       first_name: post.firstName, 
       last_name: post.lastName,
-      locale:"en"
-    }
-    
-    this.service.createUser(user).subscribe(data => {console.log(data)});
+      locale: "en"
+    };
+
+    console.log({user});
+    this.service.createUser(user).subscribe(
+      result => {if (result.status == 201) console.log('succsess')} 
+      ,error => {if (error.status == 422) console.log('non-succsess')}
+    );
   }
 }
