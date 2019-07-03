@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { UserService } from '../../services/user.service' ;
-
+import { UserService } from '../../services/user.service';
+import { Router } from '@angular/router';
+//import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-register',
@@ -10,9 +11,8 @@ import { UserService } from '../../services/user.service' ;
 })
 export class RegisterComponent implements OnInit {
   form: FormGroup;
-  local: string = "en";
 
-  constructor(private fb: FormBuilder, private service: UserService) {}
+  constructor(private fb: FormBuilder, private service: UserService, private router: Router) {}
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -32,11 +32,7 @@ export class RegisterComponent implements OnInit {
       last_name: post.lastName,
       locale: "en"
     };
-
     console.log({user});
-    this.service.createUser(user).subscribe(
-      result => {if (result.status == 201) console.log('succsess')} 
-      ,error => {if (error.status == 422) console.log('non-succsess')}
-    );
+    this.service.createUser({user}).subscribe(() => {console.log('succsess')})
   }
 }
