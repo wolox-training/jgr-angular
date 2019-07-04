@@ -33,6 +33,10 @@ export class RegisterComponent implements OnInit {
       locale: "en"
     };
     console.log({user});
-    this.service.createUser({user}).subscribe(() => {console.log('succsess')})
+    this.service.createUser({user}).subscribe(
+      () => {
+        console.log('succsess'),
+        this.router.navigate(['login'])}
+    )
   }
 }
