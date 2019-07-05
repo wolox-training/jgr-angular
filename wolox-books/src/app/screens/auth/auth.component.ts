@@ -10,7 +10,6 @@ import { UserService } from '../../services/user.service';
 })
 export class AuthComponent implements OnInit {
   store: LocalStorageService;
-  post: any;
 
   constructor(private router: Router, private service: UserService) { }
 
