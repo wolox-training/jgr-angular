@@ -7,14 +7,18 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './screens/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './screens/login/login.component';
-import { AuthComponent } from './screens/auth/auth.component';  
+import { AuthComponent } from './screens/auth/auth.component';
+import { UnauthComponent } from './screens/unauth/unauth.component';
+import { BookListComponent } from './screens/auth/screens/screens/book-list/book-list.component';  
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    AuthComponent
+    AuthComponent,
+    UnauthComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
