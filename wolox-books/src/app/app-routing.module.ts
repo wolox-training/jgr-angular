@@ -9,7 +9,7 @@ import { UnauthGuard } from './unauth.guard';
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent
+    redirectTo: 'login', pathMatch: 'full' 
   },
 
   {
