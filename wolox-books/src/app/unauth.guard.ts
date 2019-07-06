@@ -8,11 +8,11 @@ export class UnauthGuard implements CanActivate {
   constructor(private router: Router, private service: UserService) { }
 
   canActivate(): boolean {
+
     if (this.service.loggedIn()) {
       this.router.navigate(['books']);
       return true
-    } else {
-      return false
-    }
+    } 
+    return false
   }
 }

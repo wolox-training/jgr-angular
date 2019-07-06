@@ -4,6 +4,7 @@ import { RegisterComponent } from './screens/unauth/screens/register/register.co
 import { LoginComponent } from './screens/unauth/screens/login/login.component';
 import { AuthComponent } from './screens/auth/auth.component';
 import { AuthGuard } from './auth.guard';
+import { UnauthGuard } from './unauth.guard';
 
 const routes: Routes = [
   {
@@ -13,12 +14,14 @@ const routes: Routes = [
 
   {
     path: 'sing-up',
-    component: RegisterComponent
+    component: RegisterComponent,
+    canActivate: [UnauthGuard]
   },
 
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [UnauthGuard]
   },
 
   {
@@ -26,7 +29,6 @@ const routes: Routes = [
     component: AuthComponent,
     canActivate: [AuthGuard]
   },
-
 ];
 
 @NgModule({

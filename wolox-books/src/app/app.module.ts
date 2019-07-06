@@ -11,6 +11,7 @@ import { AuthComponent } from './screens/auth/auth.component';
 import { UnauthComponent } from './screens/unauth/unauth.component';
 import { BookListComponent } from './screens/auth/screens/screens/book-list/book-list.component';  
 import { AuthGuard } from './auth.guard';
+import { UnauthGuard } from './unauth.guard';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { AuthGuard } from './auth.guard';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, UnauthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
