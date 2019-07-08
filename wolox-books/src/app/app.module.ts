@@ -20,7 +20,7 @@ import { UnauthGuard } from './unauth.guard';
     LoginComponent,
     AuthComponent,
     UnauthComponent,
-    BookListComponent
+    BookListComponent,
   ],
   imports: [
     BrowserModule,
