@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpInterceptor } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { LocalStorageService } from './local-storage.service';
 
@@ -7,23 +7,29 @@ import { LocalStorageService } from './local-storage.service';
   providedIn: 'root'
 })
 
-export class BookService {
-  urlBook = 'https://private-anon-e30a1eb423-wbooksapi.apiary-mock.com/api/v1/books';
-  //books: any = `${this.urlBook}/books`;
+export class BookService  implements HttpInterceptor{
+  urlBooks = 'https://private-anon-e30a1eb423-wbooksapi.apiary-mock.com/api/v1/books';
+  //books: any = `${this.urlBooks}/books`;
   token: any =  this.store.getValue('access_token');
 
   constructor(private http: HttpClient, private store: LocalStorageService) { }
- 
-  getCollection() {
-   // console.log( 'TOKEN-->'+ this.token);
+
+  intercept(req, next): Observable<any> {
+    
     let headers = new HttpHeaders();
-    headers.set('Content-Type', 'application/json');
-    headers.set('Accept', 'application/json');
-    headers.set('Authorization', this.token);
-
-    //this.http.get(this.urlBook, {headers}).subscribe(response=>{console.log(response)});
-
-    this.http.get(this.urlBook, {headers}).subscribe(response=>{console.log(response)})
-    return this.http.get(this.urlBook, {headers})
+    headers = headers.append('Content-Type' , 'application/json');
+    headers = headers.append('Accept'       , 'application/json',);
+    headers = headers.append('Authorization', this.token);
+    return this.http.get(this.urlBooks, {headers});
+    
+    // req = this.http.get(this.urlBooks);
+    // let tokenizeReq = req.clone({
+    //   setHeaders: {
+    //     'Content-Type' : 'application/json',
+    //     'Accept'       : 'application/json',
+    //     'Authorization': this.token
+    //   },
+    // })
+    // return next.handle(tokenizeReq);
   }
 }

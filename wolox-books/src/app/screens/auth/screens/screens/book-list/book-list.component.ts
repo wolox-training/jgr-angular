@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import  {BookService} from '../../../../../services/book.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 
 @Component({
   selector: 'app-book-list',
@@ -13,10 +14,12 @@ export class BookListComponent implements OnInit {
   authName: string = 'Autor del libro';
   bookImg: any = '';
   books: Observable <any>;
+  next: any;
+  req:any;
 
   constructor(private http: HttpClient, private bookService: BookService) { }
 
   ngOnInit() {
-    this.books = this.bookService.getCollection();
+    this.bookService.intercept( this.req, this.next).subscribe(response=>{console.log(response)});
   }
 }
