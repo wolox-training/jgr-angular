@@ -1,35 +1,23 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpInterceptor } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LocalStorageService } from './local-storage.service';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class BookService  implements HttpInterceptor{
-  urlBooks = 'https://private-anon-e30a1eb423-wbooksapi.apiary-mock.com/api/v1/books';
-  //books: any = `${this.urlBooks}/books`;
+export class BookService {
+ 
+  urlBooks = 'https://private-anon-ea15534a5b-wbooksapi.apiary-mock.com/api/v1/booksgenretitleauthordescription';
   token: any =  this.store.getValue('access_token');
 
   constructor(private http: HttpClient, private store: LocalStorageService) { }
 
-  intercept(req, next): Observable<any> {
-    
+  test(): Observable<any>  {
     let headers = new HttpHeaders();
-    headers = headers.append('Content-Type' , 'application/json');
-    headers = headers.append('Accept'       , 'application/json',);
-    headers = headers.append('Authorization', this.token);
+    headers.set('Authorization',this.token);
     return this.http.get(this.urlBooks, {headers});
-    
-    // req = this.http.get(this.urlBooks);
-    // let tokenizeReq = req.clone({
-    //   setHeaders: {
-    //     'Content-Type' : 'application/json',
-    //     'Accept'       : 'application/json',
-    //     'Authorization': this.token
-    //   },
-    // })
-    // return next.handle(tokenizeReq);
+
   }
 }

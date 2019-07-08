@@ -26,11 +26,12 @@ export class LoginComponent implements OnInit {
       email: post.email,
       password: post.password,
     };
-
+    console.log(session);
     this.service.createSession({ session }).subscribe(
       response => {
         this.store.setValue('access_token', response.access_token);
-        this.router.navigate(['books'])
+        this.router.navigate(['books']);
+        console.log(response)
       })
   }
 }
