@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import  {BookService} from '../../../../../services/book.service';
+import  {BookService} from '../../../../services/book.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -9,16 +9,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./book-list.component.scss']
 })
 export class BookListComponent implements OnInit {
-  bookName: string = 'Nombre del libro';
-  authName: string = 'Autor del libro';
-  bookImg: any = '';
-  books: Observable <any>;
-  next: any;
-  req:any;
-
+  public books = [];
+  
   constructor(private http: HttpClient, private bookService: BookService) { }
 
   ngOnInit() {
-    this.bookService.getBooks().subscribe(response=>{console.log(response)});
+    this.bookService.getBooks().subscribe(response=> {this.books = response});
   }
 }
