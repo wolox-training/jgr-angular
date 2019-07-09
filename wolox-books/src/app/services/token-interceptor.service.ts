@@ -1,22 +1,19 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Injector} from '@angular/core';
 import { HttpInterceptor } from '@angular/common/http';
-import { LocalStorageService } from './local-storage.service';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TokenInterceptorService implements HttpInterceptor{
 
-  constructor() { }
-  store: any;
-  token: any;
-
+  constructor(private injector: Injector) { }
+  
   intercept (req, next) {
-    this.store= new LocalStorageService();
-    this.token = this.store.getValue('access_token');
+    let userService = this.injector.get(UserService);
     let tokenizedReq = req.clone({
       setHeaders: {
-        Authorization: 'Bearer ' + this.token
+        Authorization: `Bearer ${userService.getToken()}`
       }
     })
     return next.handle(tokenizedReq)

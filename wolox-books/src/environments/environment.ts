@@ -5,7 +5,6 @@
 export const environment = {
   production: false,
   urlBase: 'https://wbooks-api-stage.herokuapp.com/api/v1',
-  //token: this.store.getValue('access_token')
 };
 
 /*
