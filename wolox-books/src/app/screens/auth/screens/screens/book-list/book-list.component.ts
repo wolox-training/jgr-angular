@@ -19,13 +19,6 @@ export class BookListComponent implements OnInit {
   constructor(private http: HttpClient, private bookService: BookService) { }
 
   ngOnInit() {
-    //this.bookService.intercept( this.req, this.next).subscribe(response=>{console.log(response)});
-    this.bookService.test().subscribe(
-      response=>{
-        console.log(response),
-        console.log(response.id)
-          });
-    //.subscribe(response=>{console.log(response)});
-
+    this.bookService.getBooks().subscribe(response=>{console.log(response)});
   }
 }
