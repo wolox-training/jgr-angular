@@ -31,8 +31,6 @@ export class RegisterComponent implements OnInit {
       last_name: post.lastName,
       locale: "en"
     };
-
-    console.log({ user });
-    this.service.createUser({user}).subscribe(() => {console.log('succsess')});
+    this.service.createUser({ user }).subscribe(() => { console.log('success') });
   }
 }
