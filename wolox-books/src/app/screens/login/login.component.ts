@@ -10,8 +10,12 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
-  
-  constructor(private fb: FormBuilder, private service: UserService, private router: Router) { }
+
+  constructor(
+    private fb: FormBuilder,
+    private service: UserService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -25,9 +29,8 @@ export class LoginComponent implements OnInit {
       email: post.email,
       password: post.password,
     };
-
-    console.log({session}); 
-    this.service.createSession({session}).subscribe(
-    response => {console.log('access_token:' + response.access_token)})
+    this.service.createSession({ session }).subscribe(
+      response => {console.log('access_token:' + response.access_token)}
+    )
   }
 }
