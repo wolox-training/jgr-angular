@@ -8,17 +8,14 @@ const routes: Routes = [
     path: '',
     component: LoginComponent
   },
-
   {
     path: 'sing-up',
     component: RegisterComponent
   },
-
   {
     path: 'login',
     component: LoginComponent
-  },
-
+  }
 ];
 
 @NgModule({
