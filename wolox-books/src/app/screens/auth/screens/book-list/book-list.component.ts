@@ -10,7 +10,10 @@ import { HttpClient } from '@angular/common/http';
 export class BookListComponent implements OnInit {
   public books = [];
   
-  constructor(private http: HttpClient, private bookService: BookService) { }
+  constructor(
+    private http: HttpClient,
+    private bookService: BookService
+  ) {}
 
   ngOnInit() {
     this.bookService.getBooks().subscribe(response=> {this.books = response});
