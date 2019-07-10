@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { BookService } from 'src/app/services/book.service';
 import { Book } from '../book-list/book';
 
@@ -10,16 +10,14 @@ import { Book } from '../book-list/book';
 })
 export class BookDetailComponent implements OnInit {
   public book: Book;
+  id: any;
 
-  constructor( private router: Router, private bookService: BookService) { }
+  constructor( private router: Router, private bookService: BookService, private actRoute: ActivatedRoute) { 
+    this.actRoute.params.subscribe(res => this.id = res.id)
+  }
 
   ngOnInit() {
-    this.bookService.getBookById(18).subscribe(response=> {
-      console.log(response),
-      this.book = response
-    });;
-    //console.log(this.book.author);
-    //.subscribe(response=> {console.log(response)});
+    this.bookService.getBookById(this.id).subscribe(response=> {this.book = response});
   }
 
   toBookList() {
