@@ -18,6 +18,7 @@ export class BookListComponent implements OnInit {
   }
 
   getBookDetail() {
+    this.bookService.getBookById(18).subscribe(response=> {console.log(response)});
     this.router.navigate(['books/:id']);
   }
 }
