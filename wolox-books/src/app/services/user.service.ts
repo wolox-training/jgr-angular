@@ -22,6 +22,6 @@ export class UserService {
   }
 
   loggedIn(){
-    return !!this.store.getValue('access_token')
+    return !!this.store.getValue('access_token');
   }
 }

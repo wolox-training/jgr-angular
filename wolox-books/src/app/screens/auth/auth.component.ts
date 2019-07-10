@@ -10,7 +10,11 @@ import { UserService } from '../../services/user.service';
 })
 export class AuthComponent{
  
-  constructor(private router: Router, private service: UserService, private store: LocalStorageService) { }
+  constructor(
+    private router: Router,
+    private service: UserService,
+    private store: LocalStorageService
+  ) {}
 
   logout() {
     this.store.clearStorage();
