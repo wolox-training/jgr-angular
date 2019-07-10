@@ -11,7 +11,11 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
   form: FormGroup;
 
-  constructor(private fb: FormBuilder, private service: UserService, private router: Router) { }
+  constructor(
+    private fb: FormBuilder,
+    private service: UserService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -31,12 +35,10 @@ export class RegisterComponent implements OnInit {
       last_name: post.lastName,
       locale: "en"
     };
-    console.log({ user });
     this.service.createUser({ user }).subscribe(
       () => {
         console.log('succsess'),
-          this.router.navigate(['login'])
-      }
-    )
+        this.router.navigate(['login'])
+      });
   }
 }

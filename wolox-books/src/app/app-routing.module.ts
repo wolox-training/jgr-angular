@@ -13,19 +13,16 @@ const routes: Routes = [
     path: '',
     redirectTo: 'login', pathMatch: 'full' 
   },
-
   {
     path: 'sing-up',
     component: RegisterComponent,
     canActivate: [UnauthGuard]
   },
-
   {
     path: 'login',
     component: LoginComponent,
     canActivate: [UnauthGuard]
   },
-
   {
     path: 'books',
     component: AuthComponent,
@@ -35,14 +32,13 @@ const routes: Routes = [
         component: BookListComponent,
         canActivate: [AuthGuard]
       },
-
       {
         path: ':id',
         component: BookDetailComponent,
         canActivate: [AuthGuard]
       }
     ]
-  },
+  }
 ];
 
 @NgModule({
