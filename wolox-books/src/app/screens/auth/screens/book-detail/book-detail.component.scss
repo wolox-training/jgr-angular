@@ -1,11 +1,10 @@
 @import '../../../../../variables.scss';
 
 .main-page {
-    display: flex;
-    flex-direction: row;
-    padding: 50px 280px;
     background-color: $register-grey;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
 }
 
 .book-detail {
@@ -44,8 +43,8 @@
         }
 
         .value {
-            color: $grey;
             font-size: $text-medium;  
+            opacity: 0.7;
         }
     }
 }
