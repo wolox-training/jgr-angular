@@ -31,11 +31,10 @@ export class RegisterComponent implements OnInit {
       last_name: post.lastName,
       locale: "en"
     };
-    console.log({ user });
     this.service.createUser({ user }).subscribe(
       () => {
-        console.log('succsess'),
-          this.router.navigate(['login'])
+        console.log('success'),
+        this.router.navigate(['login'])
       }
     )
   }

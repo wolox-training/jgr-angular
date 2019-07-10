@@ -19,8 +19,8 @@ export class LoginComponent implements OnInit {
     this.form = this.fb.group({
       'email': [null, Validators.required],
       'password': [null, Validators.required]
-    }),
-      this.store = new LocalStorageService();
+    })
+    this.store = new LocalStorageService();
   }
 
   login(post: any) {
@@ -28,11 +28,8 @@ export class LoginComponent implements OnInit {
       email: post.email,
       password: post.password,
     };
-
-    console.log({ session });
     this.service.createSession({ session }).subscribe(
       response => {
-        console.log('access_token:' + response.access_token);
         this.store.setValue('access_token:', response.access_token);
         this.router.navigate(['auth'])
       })
