@@ -16,9 +16,10 @@ export class BookDetailComponent implements OnInit {
     private router: Router,
     private bookService: BookService,
     private actRoute: ActivatedRoute
-  ) {this.actRoute.params.subscribe(res => this.id = res.id);}
+  ) {}
 
   ngOnInit() {
+    this.actRoute.params.subscribe(res => this.id = res.id);
     this.bookService.getBookById(this.id).subscribe(response=> {this.book = response});
   }
 

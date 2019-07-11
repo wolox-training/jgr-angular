@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
       'password': [null, Validators.required],
       'firstName': [null, Validators.required],
       'lastName': [null, Validators.required]
-    })
+    });
   }
 
   singUp(post: any) {
@@ -38,7 +38,7 @@ export class RegisterComponent implements OnInit {
     this.service.createUser({ user }).subscribe(
       () => {
         console.log('succsess'),
-        this.router.navigate(['login'])
+        this.router.navigate(['login']);
       });
   }
 }
