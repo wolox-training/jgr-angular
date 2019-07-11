@@ -36,6 +36,6 @@ export class LoginComponent implements OnInit {
         this.store.setValue('access_token', response.access_token);
         this.router.navigate(['books']);
       }
-    )
+    );
   }
 }
