@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
     this.service.createSession({ session }).subscribe(
       response => {
         this.store.setValue('access_token', response.access_token);
-        this.router.navigate(['auth'])
+        this.router.navigate(['auth']);
       }
     );
   }
