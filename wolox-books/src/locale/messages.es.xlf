@@ -21,7 +21,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="a1e8ec4a0d7930cd0a9c1d755c75c69a4f835e09" datatype="html">
-        <source>Year of publicatión: <x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/><x id="INTERPOLATION" equiv-text="{{book?.year}}"/><x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/>
+        <source>Year of publication: <x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/><x id="INTERPOLATION" equiv-text="{{book?.year}}"/><x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/>
             </source>
        <target>Año de publicación: <x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/><x id="INTERPOLATION" equiv-text="{{book?.author}}"/><x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/></target>
         <context-group purpose="location">
