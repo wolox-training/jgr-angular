@@ -20,11 +20,15 @@
         width: 100%;
 
         .register-button {
+            align-items: center;
             background-color: $register-grey;
             border-radius: 10px;
             border: 2px solid $green;
             color: $green; 
+            display: flex;
+            justify-content: center;
             width: 100%;
+            
         }
     }
 
