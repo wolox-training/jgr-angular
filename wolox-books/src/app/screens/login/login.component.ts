@@ -21,20 +21,22 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      'email': [null, Validators.required],
-      'password': [null, Validators.required]
+      email: [null, Validators.required],
+      password: [null, Validators.required]
     });
   }
 
   login(post: any) {
-    let session = {
+    this.store = new LocalStorageService();
+    const session = {
       email: post.email,
       password: post.password,
     };
     this.service.createSession({ session }).subscribe(
       response => {
-        this.store.setValue('access_token:', response.access_token);
-        this.router.navigate(['auth'])
+        this.store.setValue('access_token', response.access_token);
+        this.router.navigate(['auth']);
+        console.log(response.access_token);
       });
   }
 }
