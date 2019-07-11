@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="fb04efeffd4dce4220a5ba68d7ab7e2052151fe1" datatype="html">
+        <source>Book author: <x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/><x id="INTERPOLATION" equiv-text="{{book?.author}}"/><x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/>
+            </source>
+        <target>Autor del libro: <x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/><x id="INTERPOLATION" equiv-text="{{book?.author}}"/><x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/screens/auth/screens/book-detail/book-detail.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b1818242eae06c08c4dd58c8c2baa8cb51e3aa32" datatype="html">
+        <source>Publisher: <x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/><x id="INTERPOLATION" equiv-text="{{book?.publisher}}"/><x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/>
+            </source>
+          <target>Editorial: <x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/><x id="INTERPOLATION" equiv-text="{{book?.author}}"/><x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/screens/auth/screens/book-detail/book-detail.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a1e8ec4a0d7930cd0a9c1d755c75c69a4f835e09" datatype="html">
+        <source>Year of publicatión: <x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/><x id="INTERPOLATION" equiv-text="{{book?.year}}"/><x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/>
+            </source>
+       <target>Año de publicación: <x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/><x id="INTERPOLATION" equiv-text="{{book?.author}}"/><x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/screens/auth/screens/book-detail/book-detail.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
