@@ -11,16 +11,19 @@ import { LocalStorageService } from '../../services/local-storage.service';
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
-  store: LocalStorageService;
 
-  constructor(private fb: FormBuilder, private service: UserService, private router: Router) { }
+  constructor(
+    private fb: FormBuilder,
+    private service: UserService,
+    private router: Router,
+    private store: LocalStorageService
+  ) {}
 
   ngOnInit() {
     this.form = this.fb.group({
       'email': [null, Validators.required],
       'password': [null, Validators.required]
-    })
-    this.store = new LocalStorageService();
+    });
   }
 
   login(post: any) {
@@ -32,6 +35,6 @@ export class LoginComponent implements OnInit {
       response => {
         this.store.setValue('access_token:', response.access_token);
         this.router.navigate(['auth'])
-      })
+      });
   }
 }
