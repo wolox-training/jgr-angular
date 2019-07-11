@@ -1,11 +1,11 @@
 @import '../../../../../variables.scss';
 
 .main-page {
-    display: flex;
-    flex-direction: row;
-    padding: 50px 250px;
     background-color: $register-grey;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 250px;
 }
 
 .book-desc {
