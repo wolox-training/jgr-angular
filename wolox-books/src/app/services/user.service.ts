@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';  
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,11 +7,16 @@ import { Observable } from 'rxjs';
 })
 
 export class UserService {
-  url = 'https://wbooks-api-stage.herokuapp.com/api/v1';
+  urlUser = 'https://wbooks-api-stage.herokuapp.com/api/v1';
+  urlSession = 'https://private-anon-7dacad45b6-wbooksapi.apiary-mock.com/api/v1/users';
 
-  constructor( private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  createUser(post: any): Observable<any>{
-    return this.http.post(`${this.url}/users`, post);
- }
+  createUser(post: any): Observable<any> {
+    return this.http.post(`${this.urlUser}/users`, post);
+  }
+
+  createSession(post: any): Observable<any> {
+    return this.http.post(`${this.urlSession}/sessions`, post);
+  }
 }
