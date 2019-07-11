@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { Router } from '@angular/router';
-import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-auth',
@@ -13,7 +12,6 @@ export class AuthComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private service: UserService
   ) {}
 
   ngOnInit() {

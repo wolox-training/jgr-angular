@@ -27,14 +27,16 @@ export class LoginComponent implements OnInit {
   }
 
   login(post: any) {
+    this.store = new LocalStorageService();
     let session = {
       email: post.email,
       password: post.password,
     };
     this.service.createSession({ session }).subscribe(
       response => {
-        this.store.setValue('access_token:', response.access_token);
+        this.store.setValue('access_token', response.access_token);
         this.router.navigate(['auth'])
-      });
+      }
+    );
   }
 }
