@@ -12,8 +12,7 @@ export class AuthComponent implements OnInit {
   store: LocalStorageService;
 
   constructor(
-    private router: Router,
-    private service: UserService
+    private router: Router
   ) {}
 
   ngOnInit() {
