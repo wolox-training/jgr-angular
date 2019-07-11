@@ -35,6 +35,6 @@ export class RegisterComponent implements OnInit {
       last_name: post.lastName,
       locale: "en"
     };
-    this.service.createUser({user}).subscribe(() => {this.router.navigate(['login'])})
+    this.service.createUser({user}).subscribe(() => this.router.navigate(['login']));
   }
 }
