@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { LocalStorageService } from './local-storage.service';
 import { environment } from '../../environments/environment';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +11,10 @@ import { environment } from '../../environments/environment';
 export class UserService {
   urlApi = environment.urlBase;
 
-  constructor(private http: HttpClient, private store: LocalStorageService) { }
+  constructor(
+    private http: HttpClient,
+    private store: LocalStorageService
+  ) {}
  
   createUser(post: any): Observable<any> {
     return this.http.post(`${this.urlApi}/users`, post);
@@ -23,10 +25,10 @@ export class UserService {
   }
 
   loggedIn(){
-    return !!this.store.getValue('access_token')
+    return !!this.store.getValue('access_token');
   }
 
   getToken() {
-    return this.store.getValue('access_token')
+    return this.store.getValue('access_token');
   }
 }

@@ -19,10 +19,10 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      'email': [null, Validators.required],
-      'password': [null, Validators.required],
-      'firstName': [null, Validators.required],
-      'lastName': [null, Validators.required]
+      email: [null, Validators.required],
+      password: [null, Validators.required],
+      firstName: [null, Validators.required],
+      lastName: [null, Validators.required]
     });
   }
 
@@ -33,12 +33,13 @@ export class RegisterComponent implements OnInit {
       password_confirmation: post.password,
       first_name: post.firstName,
       last_name: post.lastName,
-      locale: "en"
+      locale: 'en'
     };
     this.service.createUser({ user }).subscribe(
       () => {
         console.log('succsess'),
         this.router.navigate(['login']);
-      });
+      }
+    );
   }
 }

@@ -7,7 +7,7 @@ import { UserService } from './user.service';
 })
 export class TokenInterceptorService implements HttpInterceptor{
 
-  constructor(private injector: Injector) { }
+  constructor(private injector: Injector) {}
   
   intercept (req, next) {
     let userService = this.injector.get(UserService);
@@ -15,7 +15,7 @@ export class TokenInterceptorService implements HttpInterceptor{
       setHeaders: {
         Authorization: `Bearer ${userService.getToken()}`
       }
-    })
-    return next.handle(tokenizedReq)
+    });
+    return next.handle(tokenizedReq);
   }
 }
