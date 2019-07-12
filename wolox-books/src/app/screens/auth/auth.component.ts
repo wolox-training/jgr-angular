@@ -8,8 +8,7 @@ import { UserService } from '../../services/user.service';
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.scss']
 })
-export class AuthComponent{
- 
+export class AuthComponent {
   constructor(
     private router: Router,
     private service: UserService,
