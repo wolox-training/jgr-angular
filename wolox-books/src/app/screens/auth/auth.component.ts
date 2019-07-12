@@ -10,9 +10,7 @@ import { Router } from '@angular/router';
 export class AuthComponent implements OnInit {
   store: LocalStorageService;
 
-  constructor(
-    private router: Router,
-  ) {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.store = new LocalStorageService();

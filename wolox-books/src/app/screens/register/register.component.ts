@@ -19,21 +19,21 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      'email': [null, Validators.required],
-      'password': [null, Validators.required],
-      'firstName': [null, Validators.required],
-      'lastName': [null, Validators.required]
+      email: [null, Validators.required],
+      password: [null, Validators.required],
+      firstName: [null, Validators.required],
+      lastName: [null, Validators.required]
     });
   }
 
   singUp(post: any) {
-    let user = {
+    const user = {
       email: post.email,
       password: post.password,
       password_confirmation: post.password,
       first_name: post.firstName,
       last_name: post.lastName,
-      locale: "en"
+      locale: 'en'
     };
     this.service.createUser({ user }).subscribe(() => {this.router.navigate(['login'])});
   }
