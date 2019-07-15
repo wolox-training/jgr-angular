@@ -1,4 +1,4 @@
-@import '../../../variables';
+@import 'src/variables';
 
 .auth-nav {
   align-items: center;
@@ -9,10 +9,10 @@
 
   .auth-title {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-items: center;
     text-align: center;
-      
+
     .auth-img {
       padding-top: 5px;
       height: 25px;;
@@ -23,9 +23,9 @@
       font-size: $text-small;
     }
   }
-}
 
-.logout {
-  font-size: $text-small;
-  font-weight: 500;
+  .logout {
+    font-size: $text-small;
+    font-weight: 500;
+  }
 }

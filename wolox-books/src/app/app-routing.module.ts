@@ -9,30 +9,27 @@ import { UnauthGuard } from './unauth.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login', pathMatch: 'full' 
+    redirectTo: 'login', pathMatch: 'full'
   },
-
   {
     path: 'sing-up',
     component: RegisterComponent,
     canActivate: [UnauthGuard]
   },
-
   {
     path: 'login',
     component: LoginComponent,
     canActivate: [UnauthGuard]
   },
-
   {
     path: 'books',
     component: AuthComponent,
     canActivate: [AuthGuard]
-  },
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -21,13 +21,14 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      'email': [null, Validators.required],
-      'password': [null, Validators.required]
+      email: [null, Validators.required],
+      password: [null, Validators.required]
     });
   }
 
   login(post: any) {
-    let session = {
+    this.store = new LocalStorageService();
+    const session = {
       email: post.email,
       password: post.password,
     };
