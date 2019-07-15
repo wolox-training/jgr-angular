@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { LocalStorageService } from './local-storage.service';
 import { environment } from '../../environments/environment';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -26,5 +25,9 @@ export class UserService {
 
   loggedIn() {
     return !!this.store.getValue('access_token');
+  }
+
+  getToken() {
+    return this.store.getValue('access_token');
   }
 }

@@ -1,20 +1,20 @@
 <div class="main-page">
-    <div class="register">
-      <div class="register-title">
-        <img class="register-img" src="assets/wolox_logo.svg" alt="wolox-logoin">
-        <h1 class="register-text-title">Books</h1>
+  <div class="register">
+    <div class="register-title">
+      <img class="register-img" src="assets/wolox_logo.svg" alt="wolox-logoin">
+      <h1 class="register-text-title">Books</h1>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="login(form.value)" class="register-form">
+      <p class="input-title">Email</p>
+      <input class="register-input" formControlName="email" type="text">
+      <p class="input-title">Password</p>
+      <input class="register-input" formControlName="password" type="password">
+      <div class="sing-up-div">
+        <button class="register-input sing-up-button" type="submit">Login</button>
       </div>
-      <form [formGroup]="form" (ngSubmit)="login(form.value)" class="register-form">
-        <p class="input-title">Email</p>
-        <input class="register-input" formControlName="email" type="text">
-        <p class="input-title">Password</p>
-        <input class="register-input" formControlName="password" type="password">
-        <div class="sing-up-div">
-          <button class="register-input sing-up-button" type="submit">Login</button>
-        </div>
-      </form>
-      <div class="register-button-div">
-        <a [routerLink]="['/sing-up']" class="register-input register-button" type="button">Sing up</a>
-      </div>
+    </form>
+    <div class="register-button-div">
+      <a [routerLink]="['/sing-up']" class="register-input register-button" type="button">Sing up</a>
     </div>
   </div>
+</div>
