@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../../../services/user.service';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-register',
@@ -17,6 +16,7 @@ export class RegisterComponent implements OnInit {
     private service: UserService,
     private router: Router
   ) {}
+
   ngOnInit() {
     this.form = this.fb.group({
       email: [null, Validators.required],
@@ -35,9 +35,9 @@ export class RegisterComponent implements OnInit {
       last_name: post.lastName,
       locale: 'en'
     };
-    this.service.createUser({user}).subscribe(() => {
-      this.router.navigate(['login']);
-      console.log('success');
-    });
+    this.service.createUser({ user }).subscribe(
+      () => {
+        this.router.navigate(['login']);
+      });
   }
 }

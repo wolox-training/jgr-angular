@@ -1,0 +1,40 @@
+@import 'src/variables';
+
+.main-page {
+    background-color: $register-grey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 250px;
+}
+
+.book-desc {
+    background-color: $white;
+    box-shadow: 3px 3px 3px rgba($grey, 0.5);
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+
+    .book-img {
+        background-color: $register-grey;
+        height: 250px;
+        width: 100%;
+    }
+
+    .book-title {
+        display: flex;
+        margin-top: 15px;
+        flex-direction: column;
+
+        .text-name {
+            font-size: $text-medium;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .text-author {
+            font-size: $text-small;
+            opacity: 0.5;
+        }
+    }
+}
