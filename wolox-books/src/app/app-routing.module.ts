@@ -6,6 +6,7 @@ import { AuthComponent } from './screens/auth/auth.component';
 import { AuthGuard } from './auth.guard';
 import { UnauthGuard } from './unauth.guard';
 import { BookListComponent } from './screens/auth/screens/book-list/book-list.component';
+import { BookDetailComponent } from './screens/auth/screens/book-detail/book-detail.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,11 @@ const routes: Routes = [
       {
         path: '',
         component: BookListComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: ':id',
+        component: BookDetailComponent,
         canActivate: [AuthGuard]
       }
     ]
