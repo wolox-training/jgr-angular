@@ -11,7 +11,7 @@ import { BookDetailComponent } from './screens/auth/screens/book-detail/book-det
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login', pathMatch: 'full' 
+    redirectTo: 'login', pathMatch: 'full'
   },
   {
     path: 'sing-up',
@@ -26,6 +26,7 @@ const routes: Routes = [
   {
     path: 'books',
     component: AuthComponent,
+<<<<<<< HEAD
     children: [
       {
         path: '',
@@ -38,6 +39,9 @@ const routes: Routes = [
         canActivate: [AuthGuard]
       }
     ]
+=======
+    canActivate: [AuthGuard]
+>>>>>>> guard
   }
 ];
 
@@ -45,4 +49,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

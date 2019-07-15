@@ -7,11 +7,15 @@ import { Router } from '@angular/router';
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.scss']
 })
-export class AuthComponent {
-  constructor(
-    private router: Router,
-    private store: LocalStorageService
-  ) {}
+
+export class AuthComponent implements OnInit {
+  store: LocalStorageService;
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.store = new LocalStorageService();
+  }
 
   logout() {
     this.store.clearStorage();
