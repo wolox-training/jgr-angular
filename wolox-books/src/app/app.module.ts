@@ -30,12 +30,15 @@ import { BookDetailComponent } from './screens/auth/screens/book-detail/book-det
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [AuthGuard, UnauthGuard,
+  providers: [
+    AuthGuard,
+    UnauthGuard,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
       multi: true
-    }],
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
