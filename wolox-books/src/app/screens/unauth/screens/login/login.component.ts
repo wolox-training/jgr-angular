@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../../../services/user.service';
 import { Router } from '@angular/router';
-import { LocalStorageService } from '../../services/local-storage.service';
+import { LocalStorageService } from '../../../../services/local-storage.service';
 
 @Component({
   selector: 'app-login',
@@ -11,12 +11,12 @@ import { LocalStorageService } from '../../services/local-storage.service';
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
-  store: LocalStorageService;
 
   constructor(
     private fb: FormBuilder,
     private service: UserService,
-    private router: Router
+    private router: Router,
+    private store: LocalStorageService
   ) {}
 
   ngOnInit() {
@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
     this.service.createSession({ session }).subscribe(
       response => {
         this.store.setValue('access_token', response.access_token);
-        this.router.navigate(['auth']);
+        this.router.navigate(['books']);
       }
     );
   }
