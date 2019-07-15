@@ -1,0 +1,23 @@
+<div (click)="toBookList()" class="main-page">
+  <div class="book-detail">
+    <img class="book-img" src="{{ book?.image_url }}" alt="book_img" />
+    <div class="info">
+      <div class="title">
+        <h1 class="name">{{ book?.title }}</h1>
+        <h3 class="value">({{ book?.genre }})</h3>
+      </div>
+      <div class="book-field" i18n>
+        Book author:
+        <h3 class="value">{{ book?.author }}</h3>
+      </div>
+      <div class="book-field" i18n>
+        Publisher:
+        <h3 class="value">{{ book?.publisher }}</h3>
+      </div>
+      <div class="book-field" i18n>
+        Year of publication:
+        <h3 class="value">{{ book?.year }}</h3>
+      </div>
+    </div>
+  </div>
+</div>

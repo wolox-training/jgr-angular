@@ -33,6 +33,13 @@
             "scripts": []
           },
           "configurations": {
+            "es": {
+              "aot": true,
+              "outputPath": "dist/wolox-books-es/",
+              "i18nFile": "src/locale/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -67,6 +74,9 @@
           "configurations": {
             "production": {
               "browserTarget": "wolox-books:build:production"
+            },
+            "es": {
+              "browserTarget": "wolox-books:build:es"
             }
           }
         },
