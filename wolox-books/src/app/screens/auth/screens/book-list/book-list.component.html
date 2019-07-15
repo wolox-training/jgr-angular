@@ -1,9 +1,9 @@
 <div class="main-page">
-    <div class="book-desc" *ngFor="let book of books">
-        <img class="book-img" src="{{book.image_url}}" alt="book">
+    <div (click)='getBookDetail(book?.id)' class="book-desc" *ngFor="let book of books">
+        <img class="book-img" src="{{book?.image_url}}" alt="book_img">
         <div class="book-title">
-            <h1 class="text-name">{{book.title}}</h1>
-            <h3 class="text-author">{{book.author}}</h3>
+            <h1 class="text-name">{{book?.title}}</h1>
+            <h3 class="text-author">{{book?.author}}</h3>
         </div>
     </div>
 </div>

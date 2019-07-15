@@ -12,13 +12,17 @@ import { LocalStorageService } from '../../../../services/local-storage.service'
 export class LoginComponent implements OnInit {
   form: FormGroup;
 
-  constructor(private fb: FormBuilder, private service: UserService, private router: Router, private store: LocalStorageService) { }
+  constructor(private fb: FormBuilder,
+    private service: UserService,
+    private router: Router,
+    private store: LocalStorageService
+  ) {}
 
   ngOnInit() {
     this.form = this.fb.group({
       'email': [null, Validators.required],
       'password': [null, Validators.required]
-    })
+    });
   }
 
   login(post: any) {
