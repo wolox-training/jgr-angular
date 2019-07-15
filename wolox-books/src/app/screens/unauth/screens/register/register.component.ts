@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
   }
 
   singUp(post: any) {
-    let user = {
+    const user = {
       email: post.email,
       password: post.password,
       password_confirmation: post.password,

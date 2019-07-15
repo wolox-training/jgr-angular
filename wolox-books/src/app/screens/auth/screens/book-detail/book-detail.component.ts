@@ -12,7 +12,7 @@ export class BookDetailComponent implements OnInit {
   public book: Book;
   id: any;
 
-  constructor( 
+  constructor(
     private router: Router,
     private bookService: BookService,
     private actRoute: ActivatedRoute
@@ -20,7 +20,7 @@ export class BookDetailComponent implements OnInit {
 
   ngOnInit() {
     this.actRoute.params.subscribe(res => this.id = res.id);
-    this.bookService.getBookById(this.id).subscribe(response=> {this.book = response});
+    this.bookService.getBookById(this.id).subscribe(response => this.book = response);
   }
 
   toBookList() {
