@@ -8,7 +8,7 @@ import { RegisterComponent } from './screens/unauth/screens/register/register.co
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './screens/unauth/screens/login/login.component';
 import { AuthComponent } from './screens/auth/auth.component';
-import { BookListComponent } from './screens/auth/screens/screens/book-list/book-list.component';  
+import { BookListComponent } from './screens/auth/screens/screens/book-list/book-list.component';
 import { AuthGuard } from './auth.guard';
 import { UnauthGuard } from './unauth.guard';
 
