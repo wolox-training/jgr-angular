@@ -9,15 +9,15 @@ import { Book } from '../screens/auth/screens/book-list/book';
 })
 
 export class BookService {
-  urlApi = environment.urlBase;
-  
+  urlApi = environment.urlApi;
+
   constructor(private http: HttpClient) { }
 
   getBooks(): Observable<Book[]>  {
     return this.http.get<Book[]>(`${this.urlApi}/books`);
   }
 
-  getBookById(id: any):any {
+  getBookById(id: any): any {
     return this.http.get(`${this.urlApi}/books/${id}`);
   }
 }

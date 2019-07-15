@@ -26,7 +26,6 @@ const routes: Routes = [
   {
     path: 'books',
     component: AuthComponent,
-<<<<<<< HEAD
     children: [
       {
         path: '',
@@ -39,9 +38,6 @@ const routes: Routes = [
         canActivate: [AuthGuard]
       }
     ]
-=======
-    canActivate: [AuthGuard]
->>>>>>> guard
   }
 ];
 

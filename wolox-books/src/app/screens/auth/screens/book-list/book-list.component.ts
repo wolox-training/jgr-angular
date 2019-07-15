@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import  {BookService} from '../../../../services/book.service';
+import {BookService} from '../../../../services/book.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,14 +9,15 @@ import { Router } from '@angular/router';
 })
 export class BookListComponent implements OnInit {
   public books = [];
-  
   constructor(
     private bookService: BookService,
     private router: Router
   ) {}
 
   ngOnInit() {
-    this.bookService.getBooks().subscribe(response=> this.books = response);
+    this.bookService.getBooks().subscribe(response => {
+      return this.books = response;
+    });
   }
 
   getBookDetail(id: any) {

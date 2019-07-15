@@ -4,11 +4,7 @@
 
 export const environment = {
   production: false,
-<<<<<<< HEAD
-  urlBase: 'https://wbooks-api-stage.herokuapp.com/api/v1',
-=======
   urlApi: 'https://wbooks-api-stage.herokuapp.com/api/v1'
->>>>>>> guard
 };
 
 /*

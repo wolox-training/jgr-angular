@@ -1,4 +1,4 @@
-@import '../../../../../variables.scss';
+@import 'src/variables';
 
 .main-page {
     background-color: $register-grey;
@@ -14,8 +14,8 @@
     margin: 15px;
     padding: 20px;
     width: 250px;
-    
-    .book-img { 
+
+    .book-img {
         background-color: $register-grey;
         height: 250px;
         width: 100%;
@@ -36,5 +36,5 @@
             font-size: $text-small;
             opacity: 0.5;
         }
-    }    
+    }
 }
