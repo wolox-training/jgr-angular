@@ -1,0 +1,53 @@
+@import '../../../../../variables.scss';
+
+.main-page {
+    background-color: $register-grey;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    height: 100%;
+}
+
+.book-detail {
+    background-color: $white;
+    box-shadow: 3px 3px 3px rgba($grey, 0.5);
+    display: flex;
+    height: 350px;
+    max-width: 900px;
+    padding: 35px 20px;
+    width: 100%;
+
+    .book-img {
+        background-color: $register-grey;
+        height: 100%;
+        margin-right: 30px;
+        max-width: 300px;
+        width: 400px;
+    }
+
+    .info {
+        width: 100%;
+
+        .title {
+            margin-bottom: 5px;
+            border-bottom: 3px solid $green;
+
+            .name {
+                font-size: $text-big;
+                margin: 10px 10px 10px 0;
+            }
+        }
+
+        .book-field {
+            font-size: $text-medium;
+            font-weight: 600;
+            opacity: 0.7;
+        }
+
+        .value {
+            font-size: $text-medium;
+            margin: 10px 0;
+            opacity: 0.7;
+        }
+    }
+}
