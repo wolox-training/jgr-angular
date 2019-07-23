@@ -24,12 +24,15 @@ export class BookListComponent implements OnInit {
 
   ngOnInit() {
     this.bookService.getBooks().subscribe(response => {
-      console.log(response);
-      // this.books = response;
+      //this.books = response;
     });
   }
 
   getBookDetail(id: any) {
     this.router.navigate([`books/${id}`]);
   }
+
+  removeBook() {
+
+  };
 }

@@ -43,4 +43,16 @@
       opacity: 0.5;
     }
   }
+
+  .remove {
+    border: solid 2px grey;
+    height: 25px;
+    margin-left: 90px;
+    width: 10%;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
 }
