@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {BookService} from '../../../../services/book.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { BookState } from 'src/app/store/book.state';
+import { Book } from './book';
 
 @Component({
   selector: 'app-book-list',
@@ -8,15 +12,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./book-list.component.scss']
 })
 export class BookListComponent implements OnInit {
-  public books = [];
+  public books: Observable<Book[]>;
+
   constructor(
     private bookService: BookService,
-    private router: Router
-  ) {}
+    private router: Router,
+    private store: Store<BookState>
+  ) {
+    this.books = store.select('book');
+  }
 
   ngOnInit() {
     this.bookService.getBooks().subscribe(response => {
-      return this.books = response;
+      console.log(response);
+      // this.books = response;
     });
   }
 

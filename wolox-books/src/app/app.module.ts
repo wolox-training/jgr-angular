@@ -13,6 +13,8 @@ import { AuthGuard } from './auth.guard';
 import { UnauthGuard } from './unauth.guard';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { BookDetailComponent } from './screens/auth/screens/book-detail/book-detail.component';
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './store/books.reducer';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,10 @@ import { BookDetailComponent } from './screens/auth/screens/book-detail/book-det
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({
+      book: reducer
+    })
   ],
   providers: [
     AuthGuard,
